@@ -36,3 +36,6 @@ yarn-error.log*
 next-env.d.ts
 
 /public/md_assets/**
+
+#GEO Must ignore pnpm-lock.yaml or Vercel won't build
+pnpm-lock.yaml
