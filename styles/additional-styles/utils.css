@@ -6,7 +6,7 @@
 }
 
 .internal-link-container > .internal-link:hover + .note-preview {
-  @apply block;
+  /* @apply block; */
 }
 .internal-link-container {
   @apply relative;
@@ -16,8 +16,8 @@
 }
 .internal-link {
   @apply rounded;
-  color: #0969da;
-  background-color: rgb(243 250 251) !important;
+  @apply text-blue-500 dark:text-blue-400;
+  /* @apply bg-blue-100 dark:bg-blue-900 !important; */
 }
 
 /* Typography */
@@ -98,4 +98,9 @@
     y: 11;
     transform: rotate(135deg);
     transition: y 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.1s ease-out;
+}
+
+body {
+    @apply bg-gray-50 dark:bg-gray-900;
+    @apply text-gray-900 dark:text-gray-100;
 }

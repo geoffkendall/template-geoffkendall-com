@@ -42,7 +42,7 @@ export default function Post({ post, backlinks }: Props) {
                 {
                   url: post.ogImage?.url
                     ? post.ogImage.url
-                    : "https://geoff.li/favicon/android-chrome-512x512.png",
+                    : "https://geoffkendall.com/favicon/android-chrome-512x512.png",
                   width: post.ogImage?.url ? null : 512,
                   height: post.ogImage?.url ? null : 512,
                   type: null,
