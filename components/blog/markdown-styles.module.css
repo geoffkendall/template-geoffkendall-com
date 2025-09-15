@@ -46,6 +46,7 @@
 
 .markdown-body a {
   background-color: transparent;
+  @apply text-blue-500 dark:text-blue-400;
   text-decoration: none;
 }
 
