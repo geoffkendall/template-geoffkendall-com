@@ -1,15 +1,16 @@
-import React from 'react';
-import Author from '../../interfaces/author';
-import Backlinks from '../misc/backlinks';
-import PostBody from './post-body';
-import PostMeta from './post-meta';
+import React from 'react'
+import Author from '../../interfaces/author'
+import Backlinks from '../misc/backlinks'
+import PostBody from './post-body'
+import PostMeta from './post-meta'
 
 type Props = {
   title: string,
   content: string,
   date?: string,
   author?: Author,
-  backlinks: { [k: string]: {
+  backlinks: {
+    [k: string]: {
       title: string,
       excerpt: string,
     }
@@ -32,9 +33,9 @@ function PostSingle({
             <article>
 
               {/* Article header */}
-              <header className="max-w-3xl mx-auto mb-20">
+              <header className="mx-auto mb-20">
                 {/* Title */}
-                <h1 className="h1 text-center mb-4 text-6xl">{title}</h1>
+                <h1 className="h1 mb-4 text-6xl">{title}</h1>
               </header>
 
               {/* Article content */}
@@ -47,25 +48,25 @@ function PostSingle({
                   {/* Article meta */}
                   {(author || date) && (
                     <>
-                      <PostMeta author={author} date={date}/>
+                      <PostMeta author={author} date={date} />
                       <hr className="w-16 h-px pt-px bg-gray-200 border-0 my-6" />
                     </>
                   )}
 
                   {/* Article body */}
-                  <PostBody content={content}/>
+                  <PostBody content={content} />
 
                 </div>
 
                 {/* Sidebar */}
-                <hr className="my-10 border border-dashed lg:block"/>
+                <hr className="my-10 border border-dashed lg:block" />
                 <aside className="relative lg:block lg:w-72 lg:ml-20 shrink-0">
                   <div>
                     <h4 className="text-lg font-bold leading-snug tracking-tight mb-4">Backlinks</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
                       {
                         (Object.keys(backlinks).length > 0) && (
-                            <Backlinks backlinks={backlinks} />
+                          <Backlinks backlinks={backlinks} />
                         )
                       }
                     </div>
@@ -82,7 +83,7 @@ function PostSingle({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default PostSingle;
+export default PostSingle
